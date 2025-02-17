@@ -70,3 +70,18 @@ function filterMeals() {
     let query = document.getElementById("filter-query").value;
     alert("Filtering meals by: " + query);
 }
+// Meal Pictures Section
+function addMealPicture() {
+    let imageUrl = prompt("Enter the image URL of the meal:");
+    if (imageUrl) {
+        let gallery = document.getElementById("image-gallery");
+        let img = document.createElement("img");
+        img.src = imageUrl;
+        img.alt = "Meal Image";
+        img.style.width = "100px";
+        img.style.height = "100px";
+        img.style.borderRadius = "5px";
+        img.style.objectFit = "cover";
+        gallery.appendChild(img);
+    }
+}
