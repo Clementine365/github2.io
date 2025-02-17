@@ -85,3 +85,56 @@ function addMealPicture() {
         gallery.appendChild(img);
     }
 }
+const apiKey = 'YOUR_API_KEY';
+        const spoonacularApiUrl = 'https://api.spoonacular.com/mealplanner/generate';
+
+        // Function to fetch meal plan from the API
+        function fetchMealPlan() {
+            const timeFrame = 'day'; // Example: day, week, etc.
+            const url = `${spoonacularApiUrl}?apiKey=${apiKey}&timeFrame=${timeFrame}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const mealResults = data.meals;
+                    let mealListHTML = '<ul>';
+                    mealResults.forEach(meal => {
+                        mealListHTML += `<li>${meal.title}</li>`;
+                    });
+                    mealListHTML += '</ul>';
+                    document.getElementById('meal-results').innerHTML = mealListHTML;
+                })
+                .catch(error => {
+                    console.error('Error fetching meal plan:', error);
+                });
+        }
+
+        // Function to search for recipes based on user input
+        function searchRecipe() {
+            const query = document.getElementById('search-query').value;
+            const searchUrl = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${query}&number=5`;
+            
+            fetch(searchUrl)
+                .then(response => response.json())
+                .then(data => {
+                    let recipeResultsHTML = '<ul>';
+                    data.forEach(recipe => {
+                        recipeResultsHTML += `<li><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">${recipe.title}</a></li>`;
+                    });
+                    recipeResultsHTML += '</ul>';
+                    document.getElementById('recipe-results').innerHTML = recipeResultsHTML;
+                })
+                .catch(error => {
+                    console.error('Error searching for recipes:', error);
+                });
+        }
+        
+        // Placeholder functions for other actions
+        function loginUser() { console.log('Login button clicked'); }
+        function registerUser() { console.log('Register button clicked'); }
+        function addGroceryItem() { console.log('Add Grocery Item button clicked'); }
+        function saveRecipe() { console.log('Save Recipe button clicked'); }
+        function viewSavedRecipes() { console.log('View Saved Recipes button clicked'); }
+        function analyzeNutrition() { console.log('Analyze Nutrition button clicked'); }
+        function filterMeals() { console.log('Filter Meals button clicked'); }
+    
