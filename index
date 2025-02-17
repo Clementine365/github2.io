@@ -45,9 +45,12 @@
             </ul>
         </section>
         
-        <section id="meal-images">
-            <h2>Meal Pictures</h2>
-            <div id="image-gallery"></div>
+    
+            <section id="meal-images">
+                <h2>Meal Pictures</h2>
+                <button onclick="addMealPicture()">Add Meal Picture</button>
+                <div id="image-gallery"></div>
+            
         </section>
         
         <section id="ingredient-history">
