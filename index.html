@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="meal-planer.css">
+</head>
+<body>
+    <header>
+        <h1>Meal Planning</h1>
+    </header>
+    
+    <main>
+        <section id="user-authentication">
+            <h2>User Authentication</h2>
+            <button onclick="loginUser()">Login here</button>
+            <button onclick="registerUser()">Register here</button>
+        </section>
+        
+        <section id="meal-planning">
+            <h2>Meal Planning </h2>
+            <button onclick="fetchMealPlan()">Generate Meal Plan</button>
+            <div id="meal-results"></div>
+        </section>
+        
+        <section id="grocery-list">
+            <h2>Grocery List </h2>
+            <ul id="grocery-items"></ul>
+            <button onclick="addGroceryItem()">Add Item here</button>
+        </section>
+        
+        <section id="meal-list">
+            <h2>Meal List</h2>
+            <ul id="meals"></ul>
+        </section>
+        
+        <section id="meal-types">
+            <h2>Meal Types</h2>
+            <ul>
+                <li>Breakfast</li>
+                <li>Lunch</li>
+                <li>Dinner</li>
+                <li>Snack</li>
+            </ul>
+        </section>
+        
+        <section id="meal-images">
+            <h2>Meal Pictures</h2>
+            <div id="image-gallery"></div>
+        </section>
+        
+        <section id="ingredient-history">
+            <h2>Ingredient History</h2>
+            <ul id="ingredient-list"></ul>
+        </section>
+        
+        <section id="recipe-management">
+            <h2>Recipe Management</h2>
+            <button onclick="saveRecipe()">Save Recipe</button>
+            <button onclick="viewSavedRecipes()">check Saved Recipes</button>
+        </section>
+        
+        <section id="recipe-search">
+            <h2>Search and Find </h2>
+            <input type="text" id="search-query" placeholder="Enter ingredients...">
+            <button onclick="searchRecipe()">Search</button>
+            <div id="recipe-results"></div>
+        </section>
+        
+        <section id="nutrition">
+            <h2>Nutrition lists</h2>
+            <button onclick="analyzeNutrition()">Nutritions</button>
+        </section>
+        
+        <section id="search-filter">
+            <h2>Search and Filtering </h2>
+            <input type="text" id="filter-query" placeholder="Filter meals...">
+            <button onclick="filterMeals()">Filter here </button>
+        </section>
+    </main>
+    
+    <footer>
+        <h2>Graphic Identity</h2>
+        
+        <p> Icon: <img src="images/meal2.jpg" alt="App Icon"></p>
+        
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
