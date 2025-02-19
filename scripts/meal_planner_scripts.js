@@ -81,4 +81,5 @@ function analyzeNutrition() {
 function filterMeals() {
     let query = document.getElementById("filter-query").value;
     alert(`Filtering meals by: ${query}`);
-    
+    //now 
+}
