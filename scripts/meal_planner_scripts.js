@@ -49,12 +49,12 @@ function addGroceryItem() {
 
 function saveRecipe() {
     alert("Recipe saved!");
-    // Implement save recipe logic
+    // Recipe saved
 }
 
 function viewSavedRecipes() {
     alert("Viewing saved recipes...");
-    // Implement viewing saved recipes logic
+    
 }
 
 function searchRecipe() {
@@ -81,5 +81,4 @@ function analyzeNutrition() {
 function filterMeals() {
     let query = document.getElementById("filter-query").value;
     alert(`Filtering meals by: ${query}`);
-    // Implement filtering logic
-}
+    
